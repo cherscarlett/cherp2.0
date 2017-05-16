@@ -1,0 +1,16 @@
+<!doctype html>
+html lang="en"
+    head
+        title
+            -- ${data.app.title.firstName} ${data.app.title.lastName} ·×· ${data.app.title.jobTitle}
+        meta charset="utf-8"
+        meta name="lang" content="enUS"
+        meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes"
+        meta name="author" content="Cher Stewart"
+        meta name="description" content="Portfolio and resume for Cher Stewart, a software engineer. Cher Stewart has been a front-end developer since 2000, and learned back-end tech in 2007 to become a full-stack engineer."
+        meta name="keywords" content="Cher Stewart, Software Engineer, Front-End Developer, UX Developer, UI Developer, Back-End Engineer, Back-End Developer, Full-Stack Engineer"
+        link rel="icon" href="/public/favicon.png" sizes="64x64" type="image/png"
+        link rel="stylesheet" href="${data.cdn}main.css"
+    body class=`${data.selected}`
+        app-header app=data.app selected=data.selected
+        script src=`${data.cdn}client.js`

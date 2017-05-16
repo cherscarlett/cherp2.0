@@ -1,0 +1,32 @@
+{
+  "app": {
+    "title": {
+      "firstName": "Cher",
+      "lastName": "Stewart",
+      "jobTitle": "Software Engineer"
+    },
+    "navigation": [
+        {
+            "slug": "home",
+            "path": "/",
+            "name": "Home"
+        },
+        {
+            "slug": "skills",
+            "path": "/skills",
+            "name": "Skills"
+        },
+        {
+            "slug": "resume",
+            "path": "/resume",
+            "name": "Resume"
+        },
+        {
+            "slug": "pub",
+            "path": "/pub",
+            "name": "Pub"
+        }
+
+    ]
+  }
+}

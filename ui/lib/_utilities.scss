@@ -1,0 +1,30 @@
+@import '_math';
+
+// Functions
+
+@function getNestedMap($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+@function getColor($prop, $properties...) {
+    @return getNestedMap($colors, $prop, $properties...);
+}
+
+@function rem($px) {
+    @return unquote($px/$text-size-root + 'rem');
+}
+
+@function rem($px) {
+    @return unquote($px/$browser-text-size-root + 'em');
+}
+
+// Mixins
+
+@mixin border($color, $style, $size, $sides...) {
+    @each $side in $sides {
+        border-#{$side}: $size $style $color;
+    }
+}

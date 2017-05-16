@@ -1,0 +1,9 @@
+// Header component
+
+header.header
+    hgroup.header-headings
+        h1.header-title
+            -- ${data.app.title.firstName} ${data.app.title.lastName}
+        h2.header-subtitle
+            -- ${data.app.title.jobTitle}
+    app-navigation navigation=data.app.navigation selected=data.selected if(data.app.navigation && data.app.navigation.length)

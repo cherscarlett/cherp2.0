@@ -1,0 +1,15 @@
+$color-white: #fff;
+$color-black: #000;
+
+$colors: (
+    primary: (
+        color: $color-white,
+        background-color: $color-black,
+        background-transparency: transparentize($color-black, .87),
+        border-color: transparentize($color-white, .79)
+    ),
+    secondary: (
+        background-transparency: transparentize($color-black, .55),
+        border-color: transparentize($color-black, .79)
+    )
+)

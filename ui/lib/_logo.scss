@@ -1,0 +1,85 @@
+// Todo make this fluid
+
+@mixin logo($root) {
+  #{$root}.is-loading {
+      #{$root}-headings {
+          display: none;
+      }
+  }
+  #{$root}.is-loaded {
+      #{$root}-headings {
+          display: block;
+      }
+  }
+  #{$root}-headings {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  #{$root}-title {
+      text-transform: lowercase;
+      font-family: "Redressed", cursive;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      width: rem(160);
+      line-height: rem(150);
+      font-size: rem(40);
+      opacity: .85;
+      transition: all ease-in-out .2s;
+      &:before, &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          color: getColor(primary, color);
+          background-color: currentColor;
+          width: 1px;
+          height: rem(pythagorean(160));
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          transition: all ease-in-out .2s;
+      }
+      &:before {
+        transform: rotate(-45deg);
+      }
+      &:after {
+        transform: rotate(45deg);
+      }
+  }
+  #{$root}-subtitle {
+      text-transform: uppercase;
+      font-family: "Fira Mono", monospace;
+      position: absolute;
+      word-spacing: rem(60);
+      font-size: rem(14);
+      font-weight: 200;
+      opacity: .85;
+      transition: all ease-in-out .2s;
+      &:before, &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          color: getColor(primary, color);
+          background-color: currentColor;
+          width: rem(7);
+          height: rem(7);
+          border-radius: rem(7);
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          transition: all ease-in-out .2s;
+      }
+      &:before {
+          transform: translateY(rem(-130/4));
+      }
+      &:after {
+          transform: translateY(rem(130/4));
+      }
+  }
+}

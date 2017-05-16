@@ -1,0 +1,43 @@
+// Header component styles
+
+@import "../../_lib";
+
+.header {
+    @include border(getColor(secondary, border-color), solid, 1px, left, right);
+    margin: auto;
+    display: flex;
+    max-width: 320px;
+    flex-direction: column;
+    align-items: center;
+    height: 84vh;
+    padding-top:16vh;
+    background-color: getColor(primary, background-transparency);
+    flex-wrap: wrap;
+    transition: all ease-in-out .2s;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: transparent url(../../layouts/images/forest-min.jpg) 50% 50% no-repeat;
+        background-size: cover;
+        z-index: -1;
+        filter: blur(rem(5));
+        background-clip:padding-box;
+        background-origin: border-box;
+        border-left: calc(50vw - #{rem(160)}) solid transparent;
+        border-right: calc(50vw - #{rem(160)}) solid transparent;
+    }
+    &-headings {
+        width: 100%;
+        height: calc(100% - 16vh);
+    }
+    @include logo(&);
+    nav {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+    }
+}

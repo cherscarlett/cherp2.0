@@ -1,0 +1,33 @@
+// Navigation component styles
+
+@import "../../_lib";
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    &-link {
+        flex: 1;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: rem(11);
+        a, a:link, a:visited {
+            border: none;
+            &[aria-selected="true"] {
+                opacity: 1;
+            }
+        }
+        &:first-child {
+            width: 100%;
+            flex: none;
+            transform: translateY(-200%);
+            a {
+                text-indent: -10000px;
+                display: block;
+                height: rem(18);
+                margin: auto;
+                background: url(./images/arrow-down.svg?fill=#{getColor(primary, color)}) 50% 50% no-repeat;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,189 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,600);@import url(https://fonts.googleapis.com/css?family=Fira+Mono:400,500);@import url(https://fonts.googleapis.com/css?family=Redressed);@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,600);@import url(https://fonts.googleapis.com/css?family=Fira+Mono:400,500);@import url(https://fonts.googleapis.com/css?family=Redressed);@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,600);@import url(https://fonts.googleapis.com/css?family=Fira+Mono:400,500);@import url(https://fonts.googleapis.com/css?family=Redressed);html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  display: inline-block; }
+
+body {
+  background: #000 url(https://bucketeer-942c06e0-8ba9-4560-a61b-a52ffc7c778f.s3.amazonaws.com/public/forest-min.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-family: "Fira Sans", sans-serif; }
+  body:before, body:after {
+    content: '';
+    position: absolute;
+    height: 16vh;
+    right: 0;
+    left: 0;
+    margin: auto;
+    opacity: .5; }
+  body:before {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.21);
+    top: 0;
+    box-shadow: 0 0 0.3125em 0 rgba(0, 0, 0, 0.3); }
+  body:after {
+    border-top: 1px solid rgba(255, 255, 255, 0.21);
+    bottom: 0;
+    box-shadow: inset 0 0 0.625em rgba(0, 0, 0, 0.4); }
+
+a, a:link, a:visited {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.21);
+  color: inherit;
+  opacity: .9;
+  transition: all ease-in-out 300ms; }
+
+a:hover, a:active, a:focus {
+  outline: 0;
+  opacity: 1;
+  border-color: #fff; }
+.header {
+  border-left: 1px solid rgba(0, 0, 0, 0.21);
+  border-right: 1px solid rgba(0, 0, 0, 0.21);
+  margin: auto;
+  display: flex;
+  max-width: 320px;
+  flex-direction: column;
+  align-items: center;
+  height: 84vh;
+  padding-top: 16vh;
+  background-color: rgba(0, 0, 0, 0.13);
+  flex-wrap: wrap;
+  transition: all ease-in-out .2s; }
+  .header:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: transparent url(https://bucketeer-942c06e0-8ba9-4560-a61b-a52ffc7c778f.s3.amazonaws.com/public/forest-min.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(0.3125em);
+    background-clip: padding-box;
+    background-origin: border-box;
+    border-left: calc(50vw - 10em) solid transparent;
+    border-right: calc(50vw - 10em) solid transparent; }
+  .header-headings {
+    width: 100%;
+    height: calc(100% - 16vh); }
+  .header .header.is-loading .header-headings {
+    display: none; }
+  .header .header.is-loaded .header-headings {
+    display: block; }
+  .header .header-headings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .header .header-title {
+    text-transform: lowercase;
+    font-family: "Redressed", cursive;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    width: 10em;
+    line-height: 9.375em;
+    font-size: 2.5em;
+    opacity: .85;
+    transition: all ease-in-out .2s; }
+    .header .header-title:before, .header .header-title:after {
+      content: '';
+      display: block;
+      position: absolute;
+      color: #fff;
+      background-color: currentColor;
+      width: 1px;
+      height: 14.14214em;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      transition: all ease-in-out .2s; }
+    .header .header-title:before {
+      transform: rotate(-45deg); }
+    .header .header-title:after {
+      transform: rotate(45deg); }
+  .header .header-subtitle {
+    text-transform: uppercase;
+    font-family: "Fira Mono", monospace;
+    position: absolute;
+    word-spacing: 3.75em;
+    font-size: 0.875em;
+    font-weight: 200;
+    opacity: .85;
+    transition: all ease-in-out .2s; }
+    .header .header-subtitle:before, .header .header-subtitle:after {
+      content: '';
+      display: block;
+      position: absolute;
+      color: #fff;
+      background-color: currentColor;
+      width: 0.4375em;
+      height: 0.4375em;
+      border-radius: 0.4375em;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      transition: all ease-in-out .2s; }
+    .header .header-subtitle:before {
+      transform: translateY(-2.03125em); }
+    .header .header-subtitle:after {
+      transform: translateY(2.03125em); }
+  .header nav {
+    position: relative;
+    z-index: 2;
+    width: 100%; }
+.navigation {
+  display: flex;
+  flex-wrap: wrap; }
+  .navigation-link {
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.6875em; }
+    .navigation-link a, .navigation-link a:link, .navigation-link a:visited {
+      border: none; }
+      .navigation-link a[aria-selected="true"], .navigation-link a:link[aria-selected="true"], .navigation-link a:visited[aria-selected="true"] {
+        opacity: 1; }
+    .navigation-link:first-child {
+      width: 100%;
+      flex: none;
+      transform: translateY(-200%); }
+      .navigation-link:first-child a {
+        text-indent: -10000px;
+        display: block;
+        height: 1.125em;
+        margin: auto;
+        background: url(https://bucketeer-942c06e0-8ba9-4560-a61b-a52ffc7c778f.s3.amazonaws.com/public/sprite.svg#arrow-down--fill-23fff-usage) 50% 50% no-repeat;
+        cursor: pointer; }
