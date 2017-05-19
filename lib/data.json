@@ -13,17 +13,17 @@
         },
         {
             "slug": "skills",
-            "path": "/skills",
+            "path": "skills",
             "name": "Skills"
         },
         {
             "slug": "resume",
-            "path": "/resume",
+            "path": "resume",
             "name": "Resume"
         },
         {
             "slug": "pub",
-            "path": "/pub",
+            "path": "pub",
             "name": "Pub"
         }
 

@@ -14,10 +14,6 @@ var _connect = require('connect');
 
 var _connect2 = _interopRequireDefault(_connect);
 
-var _serveFavicon = require('serve-favicon');
-
-var _serveFavicon2 = _interopRequireDefault(_serveFavicon);
-
 var _compression = require('compression');
 
 var _compression2 = _interopRequireDefault(_compression);
@@ -42,7 +38,7 @@ var app = (0, _connect2.default)();
 
 _nodeRequire2.default.install();
 
-app.use((0, _serveFavicon2.default)(_path2.default.join(__dirname, 'public', 'favicon.png'))).use((0, _compression2.default)()).use('/', function (request, response) {
+app.use((0, _compression2.default)()).use('/', function (request, response) {
     return _router2.default.index(request, response);
 });
 

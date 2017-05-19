@@ -40,3 +40,13 @@ a:hover, a:active, a:focus {
     opacity: 1;
     border-color: getColor(primary, color);
 }
+
+.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    filter: blur(1px);
+    z-index: -2;
+}

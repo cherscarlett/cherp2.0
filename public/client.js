@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "https://bucketeer-942c06e0-8ba9-4560-a61b-a52ffc7c778f.s3.amazonaws.com/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,7 +71,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 /* jshint newcap:false */
-var specialElHandlers = __webpack_require__(15);
+var specialElHandlers = __webpack_require__(18);
 
 function VNode() {}
 
@@ -217,7 +217,7 @@ module.exports = function extend(target, source) { //A simple function to copy p
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var copyProps = __webpack_require__(26);
+var copyProps = __webpack_require__(29);
 
 function inherit(ctor, superCtor, shouldCopyProps) {
     var oldProto = ctor.prototype;
@@ -245,7 +245,7 @@ inherit._inherit = inherit;
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(13);
+__webpack_require__(15);
 // Compiled using marko@4.2.8 - DO NOT EDIT
 "use strict";
 
@@ -273,7 +273,7 @@ function render(input, out) {
         "class": "navigation-link"
       }, 1, 4)
       .e("A", {
-          href: (link.slug !== data.selected) && link.path,
+          href: (link.slug !== data.selected) && ("#" + link.path),
           "class": "spf-link",
           role: "tab",
           "aria-selected": link.slug === data.selected ? "true" : "false",
@@ -319,7 +319,7 @@ var vdom = __webpack_require__(6);
 var VElement = vdom.$__VElement;
 var VText = vdom.$__VText;
 
-var commonHelpers = __webpack_require__(18);
+var commonHelpers = __webpack_require__(21);
 var extend = __webpack_require__(1);
 
 var classList = commonHelpers.cl;
@@ -367,10 +367,10 @@ extend(exports, commonHelpers);
 /***/ (function(module, exports, __webpack_require__) {
 
 var VNode = __webpack_require__(0);
-var VComment = __webpack_require__(21);
-var VDocumentFragment = __webpack_require__(22);
-var VElement = __webpack_require__(23);
-var VText = __webpack_require__(24);
+var VComment = __webpack_require__(24);
+var VDocumentFragment = __webpack_require__(25);
+var VElement = __webpack_require__(26);
+var VText = __webpack_require__(27);
 
 var FLAG_IS_TEXTAREA = 2;
 var defaultDocument = typeof document != 'undefined' && document;
@@ -503,7 +503,7 @@ exports.$__defaultDocument = defaultDocument;
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(25);
+module.exports = __webpack_require__(28);
 
 /***/ }),
 /* 8 */
@@ -513,9 +513,15 @@ module.exports = __webpack_require__(25);
 
 /***/ }),
 /* 9 */
+/***/ (function(module, exports) {
+
+module.exports = "https://bucketeer-942c06e0-8ba9-4560-a61b-a52ffc7c778f.s3.amazonaws.com/public/icon.png";
+
+/***/ }),
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(12);
+__webpack_require__(14);
 // Compiled using marko@4.2.8 - DO NOT EDIT
 "use strict";
 
@@ -564,25 +570,41 @@ marko_template._ = render;
 
 
 /***/ }),
-/* 10 */
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+particlesJS.load('body', __webpack_require__(16));
+
+
+/***/ }),
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ui_components_app_header_index__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ui_components_app_header_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ui_components_app_header_index__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ui_components_app_navigation_index__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ui_components_app_navigation_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__ui_components_app_navigation_index__);
-__webpack_require__(8)
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ui_layouts_base_scss__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ui_layouts_base_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ui_layouts_base_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ui_layouts_main_js__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ui_layouts_main_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__ui_layouts_main_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lib_icon_png__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lib_icon_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__lib_icon_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ui_components_app_header_index__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ui_components_app_header_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__ui_components_app_header_index__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ui_components_app_navigation_index__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ui_components_app_navigation_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__ui_components_app_navigation_index__);
 
 
 
-__WEBPACK_IMPORTED_MODULE_0__ui_components_app_header_index___default.a.renderSync().appendTo(document.body)
-__WEBPACK_IMPORTED_MODULE_1__ui_components_app_navigation_index___default.a.renderSync().appendTo(document.body)
+
+
+
+
+__WEBPACK_IMPORTED_MODULE_3__ui_components_app_header_index___default.a.renderSync().appendTo(document.body)
+__WEBPACK_IMPORTED_MODULE_4__ui_components_app_navigation_index___default.a.renderSync().appendTo(document.body)
 
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, exports) {
 
 /* jshint newcap:false */
@@ -753,19 +775,25 @@ EventEmitter.prototype = {
 module.exports = EventEmitter;
 
 /***/ }),
-/* 12 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
 /* 14 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports) {
+
+module.exports = "https://bucketeer-942c06e0-8ba9-4560-a61b-a52ffc7c778f.s3.amazonaws.com/public/particlesjs.config.json";
+
+/***/ }),
+/* 17 */
 /***/ (function(module, exports) {
 
 var markoGlobal = window.$MG || (window.$MG = {
@@ -906,7 +934,7 @@ exports.$__getMarkoPropsFromEl = getMarkoPropsFromEl;
 
 
 /***/ }),
-/* 15 */
+/* 18 */
 /***/ (function(module, exports) {
 
 function syncBooleanAttrProp(fromEl, toEl, name) {
@@ -989,10 +1017,10 @@ module.exports = {
 
 
 /***/ }),
-/* 16 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var domInsert = __webpack_require__(17);
+var domInsert = __webpack_require__(20);
 
 function getComponentDefs(result) {
     var componentDefs = result.$__components;
@@ -1074,11 +1102,11 @@ domInsert(
 
 
 /***/ }),
-/* 17 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var extend = __webpack_require__(1);
-var componentsUtil = __webpack_require__(14);
+var componentsUtil = __webpack_require__(17);
 var destroyComponentForEl = componentsUtil.$__destroyComponentForEl;
 var destroyElRecursive = componentsUtil.$__destroyElRecursive;
 
@@ -1160,7 +1188,7 @@ module.exports = function(target, getEl, afterInsert) {
 
 
 /***/ }),
-/* 18 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1284,7 +1312,7 @@ exports.cl = function classListHelper() {
 
 
 /***/ }),
-/* 19 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var defaultCreateOut = __webpack_require__(4);
@@ -1429,17 +1457,17 @@ module.exports = function(target, renderer) {
 
 
 /***/ }),
-/* 20 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var EventEmitter = __webpack_require__(11);
+var EventEmitter = __webpack_require__(13);
 var vdom = __webpack_require__(6);
 var VElement = vdom.$__VElement;
 var VDocumentFragment = vdom.$__VDocumentFragment;
 var VComment = vdom.$__VComment;
 var VText = vdom.$__VText;
 var virtualizeHTML = vdom.$__virtualizeHTML;
-var RenderResult = __webpack_require__(16);
+var RenderResult = __webpack_require__(19);
 var defaultDocument = vdom.$__defaultDocument;
 
 var FLAG_FINISHED = 1;
@@ -1766,7 +1794,7 @@ module.exports = AsyncVDOMBuilder;
 
 
 /***/ }),
-/* 21 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var VNode = __webpack_require__(0);
@@ -1795,7 +1823,7 @@ module.exports = VComment;
 
 
 /***/ }),
-/* 22 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var VNode = __webpack_require__(0);
@@ -1835,7 +1863,7 @@ module.exports = VDocumentFragment;
 
 
 /***/ }),
-/* 23 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var VNode = __webpack_require__(0);
@@ -2186,7 +2214,7 @@ module.exports = VElement;
 
 
 /***/ }),
-/* 24 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var VNode = __webpack_require__(0);
@@ -2217,15 +2245,15 @@ module.exports = VText;
 
 
 /***/ }),
-/* 25 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // helpers provide a core set of various utility methods
 // that are available in every template
-var AsyncVDOMBuilder = __webpack_require__(20);
-var makeRenderable = __webpack_require__(19);
+var AsyncVDOMBuilder = __webpack_require__(23);
+var makeRenderable = __webpack_require__(22);
 
 /**
  * Method is for internal usage only. This method
@@ -2260,7 +2288,7 @@ __webpack_require__(4).$__setCreateOut(createOut);
 
 
 /***/ }),
-/* 26 */
+/* 29 */
 /***/ (function(module, exports) {
 
 module.exports = function copyProps(from, to) {

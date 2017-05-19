@@ -17,7 +17,7 @@
     @return unquote($px/$text-size-root + 'rem');
 }
 
-@function rem($px) {
+@function em($px) {
     @return unquote($px/$browser-text-size-root + 'em');
 }
 

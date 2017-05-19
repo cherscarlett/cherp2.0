@@ -12,9 +12,6 @@ const extractSass = new ExtractText({
                       filename: "public/[name].css"
                     })
 const SpriteLoader = require('svg-sprite-loader/plugin')
-const PrepackWebpack = require('prepack-webpack-plugin')
-
-const prePackConfiguration = {} // Todo: do this
 
 module.exports = {
     entry: "./client.js",
@@ -28,8 +25,15 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(png|jpg)$/,
-                loader: 'file-loader?name=public/[name].[ext]'
+                test: /\.(png|jpg|json)$/,
+                use: [
+                  { loader: 'file-loader',
+                    options: {
+                      publicPath: `https://${process.env.BUCKETEER_BUCKET_NAME}.s3.amazonaws.com/`,
+                      name: 'public/[name].[ext]'
+                    }
+                  }
+                ]
             },
             {
                 test: /\.svg$/,
@@ -37,7 +41,7 @@ module.exports = {
                   { loader: 'svg-sprite-loader',
                     options: {
                       extract: true,
-                      publicPath: `https://${process.env.BUCKETEER_BUCKET_NAME}.s3.amazonaws.com/public/`,
+                      publicPath: `https://${process.env.BUCKETEER_BUCKET_NAME}.s3.amazonaws.com/`,
                       spriteFilename: 'public/sprite.svg'
                     }
                   },
@@ -73,7 +77,6 @@ module.exports = {
             }
         }),
         extractSass,
-        new SpriteLoader(),
-        new PrepackWebpackPlugin(prePackConfiguration)
+        new SpriteLoader()
     ]
 }

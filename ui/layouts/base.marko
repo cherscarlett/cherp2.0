@@ -9,8 +9,9 @@ html lang="en"
         meta name="author" content="Cher Stewart"
         meta name="description" content="Portfolio and resume for Cher Stewart, a software engineer. Cher Stewart has been a front-end developer since 2000, and learned back-end tech in 2007 to become a full-stack engineer."
         meta name="keywords" content="Cher Stewart, Software Engineer, Front-End Developer, UX Developer, UI Developer, Back-End Engineer, Back-End Developer, Full-Stack Engineer"
-        link rel="icon" href="/public/favicon.png" sizes="64x64" type="image/png"
+        link rel="shortcut icon" href="${data.cdn}icon.png" sizes="64x64" type="image/png"
         link rel="stylesheet" href="${data.cdn}main.css"
-    body class=`${data.selected}`
+    body class="${data.selected}" id="body"
         app-header app=data.app selected=data.selected
-        script src=`${data.cdn}client.js`
+        script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
+        script src="${data.cdn}client.js"

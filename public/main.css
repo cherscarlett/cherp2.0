@@ -46,11 +46,11 @@ body {
   body:before {
     border-bottom: 1px solid rgba(255, 255, 255, 0.21);
     top: 0;
-    box-shadow: 0 0 0.3125em 0 rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.3); }
   body:after {
     border-top: 1px solid rgba(255, 255, 255, 0.21);
     bottom: 0;
-    box-shadow: inset 0 0 0.625em rgba(0, 0, 0, 0.4); }
+    box-shadow: inset 0 0 0.625rem rgba(0, 0, 0, 0.4); }
 
 a, a:link, a:visited {
   text-decoration: none;
@@ -63,6 +63,15 @@ a:hover, a:active, a:focus {
   outline: 0;
   opacity: 1;
   border-color: #fff; }
+
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter: blur(1px);
+  z-index: -2; }
 .header {
   border-left: 1px solid rgba(0, 0, 0, 0.21);
   border-right: 1px solid rgba(0, 0, 0, 0.21);
@@ -86,11 +95,11 @@ a:hover, a:active, a:focus {
     background: transparent url(https://bucketeer-942c06e0-8ba9-4560-a61b-a52ffc7c778f.s3.amazonaws.com/public/forest-min.jpg) 50% 50% no-repeat;
     background-size: cover;
     z-index: -1;
-    filter: blur(0.3125em);
+    filter: blur(0.3125rem);
     background-clip: padding-box;
     background-origin: border-box;
-    border-left: calc(50vw - 10em) solid transparent;
-    border-right: calc(50vw - 10em) solid transparent; }
+    border-left: calc(50vw - 10rem) solid transparent;
+    border-right: calc(50vw - 10rem) solid transparent; }
   .header-headings {
     width: 100%;
     height: calc(100% - 16vh); }
@@ -109,9 +118,9 @@ a:hover, a:active, a:focus {
     position: relative;
     width: 100%;
     text-align: center;
-    width: 10em;
-    line-height: 9.375em;
-    font-size: 2.5em;
+    width: 10rem;
+    line-height: 9.375rem;
+    font-size: 2.5rem;
     opacity: .85;
     transition: all ease-in-out .2s; }
     .header .header-title:before, .header .header-title:after {
@@ -121,7 +130,7 @@ a:hover, a:active, a:focus {
       color: #fff;
       background-color: currentColor;
       width: 1px;
-      height: 14.14214em;
+      height: 14.14214rem;
       left: 0;
       right: 0;
       top: 0;
@@ -136,8 +145,8 @@ a:hover, a:active, a:focus {
     text-transform: uppercase;
     font-family: "Fira Mono", monospace;
     position: absolute;
-    word-spacing: 3.75em;
-    font-size: 0.875em;
+    word-spacing: 3.75rem;
+    font-size: 0.875rem;
     font-weight: 200;
     opacity: .85;
     transition: all ease-in-out .2s; }
@@ -147,9 +156,9 @@ a:hover, a:active, a:focus {
       position: absolute;
       color: #fff;
       background-color: currentColor;
-      width: 0.4375em;
-      height: 0.4375em;
-      border-radius: 0.4375em;
+      width: 0.4375rem;
+      height: 0.4375rem;
+      border-radius: 0.4375rem;
       left: 0;
       right: 0;
       top: 0;
@@ -157,9 +166,9 @@ a:hover, a:active, a:focus {
       margin: auto;
       transition: all ease-in-out .2s; }
     .header .header-subtitle:before {
-      transform: translateY(-2.03125em); }
+      transform: translateY(-2.03125rem); }
     .header .header-subtitle:after {
-      transform: translateY(2.03125em); }
+      transform: translateY(2.03125rem); }
   .header nav {
     position: relative;
     z-index: 2;
@@ -171,7 +180,7 @@ a:hover, a:active, a:focus {
     flex: 1;
     text-align: center;
     text-transform: uppercase;
-    font-size: 0.6875em; }
+    font-size: 0.6875rem; }
     .navigation-link a, .navigation-link a:link, .navigation-link a:visited {
       border: none; }
       .navigation-link a[aria-selected="true"], .navigation-link a:link[aria-selected="true"], .navigation-link a:visited[aria-selected="true"] {
@@ -183,7 +192,7 @@ a:hover, a:active, a:focus {
       .navigation-link:first-child a {
         text-indent: -10000px;
         display: block;
-        height: 1.125em;
+        height: 1.125rem;
         margin: auto;
         background: url(https://bucketeer-942c06e0-8ba9-4560-a61b-a52ffc7c778f.s3.amazonaws.com/public/sprite.svg#arrow-down--fill-23fff-usage) 50% 50% no-repeat;
         cursor: pointer; }

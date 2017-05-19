@@ -4,5 +4,5 @@ nav role="navigation"
     ul.navigation
         for(link in data.navigation)
             li.navigation-link id="${link.slug}"
-                a href=(link.slug !== data.selected && link.path) class="spf-link" role="tab" aria-selected=(link.slug === data.selected ? 'true' : 'false') data-next-tab=(link.slug === data.selected && link.slug === 'home' ? 'true' : 'false')
+                a href=(link.slug !== data.selected && "#${link.path}") class="spf-link" role="tab" aria-selected=(link.slug === data.selected ? 'true' : 'false') data-next-tab=(link.slug === data.selected && link.slug === 'home' ? 'true' : 'false')
                     -- ${link.name}
