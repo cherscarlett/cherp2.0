@@ -44,14 +44,8 @@ var io = new _socket2.default(server);
 
 _nodeRequire2.default.install();
 
-app.use((0, _compression2.default)()).use('/skills', function (request, response) {
+app.use((0, _compression2.default)()).use('/', function (request, response) {
     return _router2.default.page(request, response, io);
-}).use('/resume', function (request, response) {
-    return _router2.default.page(request, response, io);
-}).use('/pub', function (request, response) {
-    return _router2.default.page(request, response, io);
-}).use('/', function (request, response) {
-    return _router2.default.index(request, response, io);
 });
 
 server.listen(port, function (err) {

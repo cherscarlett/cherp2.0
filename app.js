@@ -20,10 +20,7 @@ marko.install()
 
 app
     .use(compression())
-    .use('/skills', (request, response) => router.page(request, response, io))
-    .use('/resume', (request, response) => router.page(request, response, io))
-    .use('/pub', (request, response) => router.page(request, response, io))
-    .use('/', (request, response) => router.index(request, response, io))
+    .use('/', (request, response) => router.page(request, response, io))
 
 server.listen(port, (err) => {
     if (err) {
