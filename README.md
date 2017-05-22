@@ -9,7 +9,7 @@ Goals:
 * Move from Heroku to AWS
 * Learn to setup a multi-container docker application
 * Try HTTP/2
-* Move from gulp to webpack
+* ~~Move from gulp to webpack~~
 * Use service workers
 * Add skills entries to database, and some kind of blogging and document service at visible @ /pub
 
@@ -20,12 +20,14 @@ Tech:
 * Docker
 * Dynamodb
 * Python Flask API
-* Nodejs 
-* Connect
-* Marko.js
+* ✔️ Nodejs 
+* ✔️ Connect
+* ✔️ Marko.js
 * Structured Page Fragments
 * Socket.io
 * Zeromq
-* Babel
-* SASS
-* Webpack
+* ✔️ Babel
+* ✔️ SASS
+* ✔️ Webpack
+
+✔️ = implemented 
