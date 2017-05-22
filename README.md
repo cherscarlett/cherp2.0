@@ -1,7 +1,7 @@
 cherp2.0
 =======
 
-New personal site: cherp.io
+New personal site: [cherp.io](http://cherp.io/)
 
 Goals: 
 ------
