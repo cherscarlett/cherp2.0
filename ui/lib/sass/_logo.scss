@@ -1,6 +1,6 @@
 // Todo make this fluid
 
-@mixin logo($root) {
+@mixin logo($root, $width) {
   #{$root}.is-loading {
       #{$root}-headings {
           display: none;
@@ -16,32 +16,33 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      transition: $animation;
   }
   #{$root}-title {
       text-transform: lowercase;
-      font-family: "Redressed", cursive;
+      @include font(Redressed);
       position: relative;
       width: 100%;
       text-align: center;
-      width: rem(160);
-      line-height: rem(150);
-      font-size: rem(40);
+      width: rem(.5 * $width);
+      line-height: rem(.46875 * $width);
+      font-size: rem(.125 * $width);
       opacity: .85;
-      transition: all ease-in-out .2s;
+      transition: $animation;
       &:before, &:after {
           content: '';
           display: block;
           position: absolute;
-          color: getColor(primary, color);
+          color: inherit;
           background-color: currentColor;
           width: 1px;
-          height: rem(pythagorean(160));
+          height: rem(pythagorean(.5 * $width));
           left: 0;
           right: 0;
           top: 0;
           bottom: 0;
           margin: auto;
-          transition: all ease-in-out .2s;
+          transition: $animation;
       }
       &:before {
         transform: rotate(-45deg);
@@ -52,34 +53,34 @@
   }
   #{$root}-subtitle {
       text-transform: uppercase;
-      font-family: "Fira Mono", monospace;
+      @include font(Fira Mono);
       position: absolute;
       word-spacing: rem(60);
-      font-size: rem(14);
+      font-size: rem(.04375 * $width);
       font-weight: 200;
       opacity: .85;
-      transition: all ease-in-out .2s;
+      transition: $animation;
       &:before, &:after {
           content: '';
           display: block;
           position: absolute;
-          color: getColor(primary, color);
+          color: inherit;
           background-color: currentColor;
-          width: rem(7);
-          height: rem(7);
-          border-radius: rem(7);
+          width: rem(.021875 * $width);
+          height: rem(.021875 * $width);
+          border-radius: rem(.021875 * $width);
           left: 0;
           right: 0;
           top: 0;
           bottom: 0;
           margin: auto;
-          transition: all ease-in-out .2s;
+          transition: $animation;
       }
       &:before {
-          transform: translateY(rem(-130/4));
+          transform: translateY(rem(-.25 * (.40625 * $width)));
       }
       &:after {
-          transform: translateY(rem(130/4));
+          transform: translateY(rem(.25 * (.40625 * $width)));
       }
   }
 }

@@ -1,0 +1,289 @@
+[
+  {
+    "id": "html5",
+    "strength": "10",
+    "text": "HTML5",
+    "type": "Markup Language",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "css3",
+    "strength": "10",
+    "text": "CSS3",
+    "type": "Style Language",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "xml",
+    "strength": "10",
+    "text": "XML",
+    "type": "Markup Language",
+    "typeShort": "interests"
+  },
+  {
+    "id": "javascript",
+    "strength": "8",
+    "text": "JavaScript",
+    "type": "OO Programming Language",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "jquery",
+    "strength": "8",
+    "text": "jQuery",
+    "type": "JavaScript Library",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "backbone",
+    "strength": "7",
+    "text": "Backbonejs",
+    "type": "MVP JavaScript Library",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "underscore",
+    "strength": "8",
+    "text": "Underscorejs",
+    "type": "JavaScript Library",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "require",
+    "strength": "7",
+    "text": "RequireJS",
+    "type": "JavaScript Module Loader",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "gulp",
+    "strength": "7",
+    "text": "Gulp",
+    "type": "JavaScript Task/Build Runner",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "sass",
+    "strength": "10",
+    "text": "SASS",
+    "type": "CSS Preprocessor",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "less",
+    "strength": "10",
+    "text": "LESS",
+    "type": "CSS Preprocessor",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "haml",
+    "strength": "10",
+    "text": "HAML",
+    "type": "Templating Language",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "jade",
+    "strength": "10",
+    "text": "Jade",
+    "type": "Templating Language",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "marko",
+    "strength": "7",
+    "text": "Marko",
+    "type": "Templating Language",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "react",
+    "strength": "5",
+    "text": "React",
+    "type": "Templating Language",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "angular",
+    "strength": "8",
+    "text": "Angular",
+    "type": "Templating Language",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "freemarker",
+    "strength": "8",
+    "text": "Freemarker",
+    "type": "Templating Language",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "velocity",
+    "strength": "3",
+    "text": "Velocity",
+    "type": "Templating Language",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "django",
+    "strength": "10",
+    "text": "Django",
+    "type": "Web Application Framework",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "vue",
+    "strength": "8",
+    "text": "Vue.js",
+    "type": "Templating Language",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "rails",
+    "strength": "10",
+    "text": "Rails",
+    "type": "Web Application Framework",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "spring",
+    "strength": "4",
+    "text": "SpringSource MVC",
+    "type": "Web Application Framework",
+    "typeShort": "ux/ui"
+  },
+  {
+    "id": "python",
+    "strength": "8",
+    "text": "Python",
+    "type": "OO Programming Language",
+    "typeShort": "server"
+  },
+  {
+    "id": "java",
+    "strength": "7",
+    "text": "Java",
+    "type": "OO Programming Language",
+    "typeShort": "server"
+  },
+  {
+    "id": "node",
+    "strength": "8",
+    "text": "NodeJS",
+    "type": "I/O JavaScript Platform",
+    "typeShort": "server"
+  },
+  {
+    "id": "ruby",
+    "strength": "10",
+    "text": "Ruby",
+    "type": "OO Programming Language",
+    "typeShort": "server"
+  },
+  {
+    "id": "groovy",
+    "strength": "7",
+    "text": "Groovy",
+    "type": "OO Programming Language",
+    "typeShort": "server"
+  },
+  {
+    "id": "maven",
+    "strength": "4",
+    "text": "Maven",
+    "type": "Automation Tool",
+    "typeShort": "server"
+  },
+  {
+    "id": "tomcat",
+    "strength": "4",
+    "text": "Tomcat",
+    "type": "Web Server and Servlet",
+    "typeShort": "server"
+  },
+  {
+    "id": "git",
+    "strength": "10",
+    "text": "Git",
+    "type": "Version Control System",
+    "typeShort": "server"
+  },
+  {
+    "id": "subversion",
+    "strength": "10",
+    "text": "Subversion",
+    "type": "Version Control System",
+    "typeShort": "server"
+  },
+  {
+    "id": "sql",
+    "strength": "5",
+    "text": "SQL",
+    "type": "Database Communication Language",
+    "typeShort": "server"
+  },
+  {
+    "id": "webgl",
+    "strength": "2",
+    "text": "WebGL",
+    "type": "3D Graphics",
+    "typeShort": "interests"
+  },
+  {
+    "id": "threejs",
+    "strength": "2",
+    "text": "three.js",
+    "type": "JavaScript Library for 3D Graphics",
+    "typeShort": "interests"
+  },
+  {
+    "id": "d3",
+    "strength": "2",
+    "text": "D3",
+    "type": "JavaScript Library for Data Visualization",
+    "typeShort": "interests"
+  },
+  {
+    "id": "compnuer",
+    "strength": "2",
+    "text": "Computational Neuroscience",
+    "type": "Building neural networks in Python",
+    "typeShort": "interests"
+  },
+  {
+    "id": "machlearn",
+    "strength": "2",
+    "text": "Machine Learning",
+    "type": "Building algorithms to detect behavior, and adjust functionality.",
+    "typeShort": "interests"
+  },
+  {
+    "id": "ai",
+    "strength": "2",
+    "text": "Artificial Intelligence",
+    "type": "Building algorithms to anticipate behavior.",
+    "typeShort": "interests"
+  },
+  {
+    "id": "cplusplus",
+    "strength": "1",
+    "text": "C++",
+    "type": "OO Programming Language",
+    "typeShort": "interests"
+  },
+  {
+    "id": "unity",
+    "strength": "1",
+    "text": "Unity",
+    "type": "Game Engine",
+    "typeShort": "interests"
+  },
+  {
+    "id": "unreal",
+    "strength": "1",
+    "text": "Unreal Engine",
+    "type": "Game Engine",
+    "typeShort": "interests"
+  }
+]

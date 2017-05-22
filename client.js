@@ -1,9 +1,11 @@
-import './ui/layouts/base.scss'
-import './ui/layouts/main.js'
+import './ui/lib/javascripts/particles.js'
+import './ui/lib/javascripts/fog.js'
+import './ui/lib/javascripts/socket.js'
 import './lib/icon.png'
+import './ui/layouts/base/index'
 
-import header from './ui/components/app-header/index'
-import navigation from './ui/components/app-navigation/index'
+import components from 'marko/components'
 
-header.renderSync().appendTo(document.body)
-navigation.renderSync().appendTo(document.body)
+//components.init()
+
+import './ui/pages/skills/index'

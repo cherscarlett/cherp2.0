@@ -5,6 +5,14 @@
 .navigation {
     display: flex;
     flex-wrap: wrap;
+    &:not([data-page="home"]) {
+        align-items: center;
+        height: 100%;
+        &:before {
+            content: '';
+            flex: 1;
+        }
+    }
     &-link {
         flex: 1;
         text-align: center;
@@ -12,19 +20,45 @@
         font-size: rem(11);
         a, a:link, a:visited {
             border: none;
+            opacity: .6;
             &[aria-selected="true"] {
                 opacity: 1;
             }
         }
+        a:hover, a:active {
+            opacity: 1;
+        }
+        &:not([data-page="home"]):first-child {
+            transform: rotate(180deg);
+        }
+        &[data-page="home"] {
+            transform: translateY(100%);
+            &:first-child {
+                width: 100%;
+                flex: none;
+                transform: translateY(-225%);
+                a, a:link, a:visited {
+                   margin-right: auto;
+                   &[aria-selected="true"] {
+                       opacity: .6;
+                   }
+                }
+                a:hover, a:active {
+                    &[aria-selected="true"] {
+                        opacity: 1;
+                    }
+                }
+
+            }
+        }
         &:first-child {
-            width: 100%;
-            flex: none;
-            transform: translateY(-200%);
+            order:4;
             a {
                 text-indent: -10000px;
                 display: block;
                 height: rem(18);
-                margin: auto;
+                width: rem(16);
+                margin-left: auto;
                 background: url(./images/arrow-down.svg?fill=#{getColor(primary, color)}) 50% 50% no-repeat;
                 cursor: pointer;
             }

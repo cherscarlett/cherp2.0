@@ -1,0 +1,18 @@
+$backgrounds: (
+    primary: "./images/forest-min.jpg",
+    secondary: "./images/ocean-min.jpg",
+    tertiary: "./images/fuji-min.jpg",
+    quaternary: "./images/space-min.jpg",
+    quinary: "./images/blizzard-min.jpg"
+);
+
+@function getUrl($theme) {
+    @return unquote(map-get($backgrounds, $theme));
+}
+
+@mixin background($theme) {
+    background-image: url(#{getUrl($theme)});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}

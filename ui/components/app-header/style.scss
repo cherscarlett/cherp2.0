@@ -2,42 +2,132 @@
 
 @import "../../_lib";
 
+// Pages
+
+$width: 320/4;
+$height: 50;
+
 .header {
-    @include border(getColor(secondary, border-color), solid, 1px, left, right);
     margin: auto;
     display: flex;
-    max-width: 320px;
-    flex-direction: column;
-    align-items: center;
-    height: 84vh;
-    padding-top:16vh;
-    background-color: getColor(primary, background-transparency);
-    flex-wrap: wrap;
-    transition: all ease-in-out .2s;
-    &:before {
+    transition: $animation;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: rem($height);
+    width: 100%;
+    z-index: 3;
+    &:before, &:after {
         content: '';
-        position: absolute;
+        position: fixed;
         left: 0;
         right: 0;
         top: 0;
-        bottom: 0;
-        background: transparent url(../../layouts/images/forest-min.jpg) 50% 50% no-repeat;
-        background-size: cover;
+        height: rem($height);
+        transition: $animation;
+    }
+    &:before {
         z-index: -1;
-        filter: blur(rem(5));
+        filter: blur(rem(6));
+        @include background(primary);
         background-clip:padding-box;
         background-origin: border-box;
-        border-left: calc(50vw - #{rem(160)}) solid transparent;
-        border-right: calc(50vw - #{rem(160)}) solid transparent;
+        border-bottom: calc(100vh - #{rem(1)} - #{rem($height)}) solid transparent;
+        opacity: .95;
     }
+    &:after {
+        width: 100%;
+        background-color: getColor(primary, background-transparency);
+        z-index: 1;
+        border-bottom: 1px solid getColor(secondary, border-color);
+    }
+    &[data-page="home"] {
+        width: rem($home-width);
+        height: 100vh - $home-gutter;
+        padding-top: $home-gutter;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        &:before, &:after {
+            bottom: 0;
+            height: 100%;
+        }
+        &:before {
+            border-bottom: none;
+            border-left: calc(50vw - #{rem(1)} - #{rem(.5 * $home-width)}) solid transparent;
+            border-right: calc(50vw - #{rem(1)} - #{rem(.5 * $home-width)}) solid transparent;
+        }
+        &:after {
+            width: rem($home-width);
+            margin: auto;
+            border-bottom: none;
+            @include border(getColor(secondary, border-color), solid, 1px, left, right);
+        }
+
+    }
+    @include logo(&, $home-width);
     &-headings {
         width: 100%;
         height: calc(100% - 16vh);
-    }
-    @include logo(&);
-    nav {
         position: relative;
         z-index: 2;
-        width: 100%;
+        transition: $animation;
+        margin-top: rem(-9);
+        &:not([data-page="home"]) {
+            transform: translateX(-9%);
+            align-self: center;
+            margin-top: rem(-8);
+        }
+    }
+    &-title {
+        &:not([data-page="home"]) {
+            font-size: rem(28);
+            width: rem(20);
+            line-height: rem(26);
+
+            &:before{
+                transform: rotate(-45deg) scale(.2);
+                margin-top: rem(-83);
+            }
+
+            &:after{
+                transform: rotate(45deg) scale(.2);
+                margin-top: rem(-83);
+            }
+        }
+    }
+
+    &-subtitle {
+        &:not([data-page="home"]) {
+
+            &:before{
+                transform: scale(.4);
+                margin-left: rem(-12);
+                margin-top: rem(1);
+            }
+
+            &:after{
+                transform: scale(.4);
+                margin-left: rem(6);
+                margin-top: rem(1);
+            }
+        }
+    }
+    nav {
+        position: absolute;
+        z-index: 10;
+        width: rem($home-width);
+        margin: auto;
+        transition: $animation;
+        left: 0;
+        right: 0;
+        &:not([data-page="home"]) {
+            height: 100%;
+        }
+        &[data-page="home"] {
+            width: 100%;
+            margin: initial;
+            bottom: calc(#{$home-gutter} - #{rem(30)});
+        }
     }
 }

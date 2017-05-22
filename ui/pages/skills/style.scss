@@ -1,0 +1,31 @@
+// Skills page styles
+
+@import "../../_lib";
+
+section[data-page="skills"] {
+    overflow: auto;
+    padding-top: $home-gutter;
+    &:after {
+        width: rem($home-width);
+        margin: auto;
+    }
+    &:before {
+        border-left: calc(50vw - #{rem(1)} - #{rem(.5 * $home-width)}) solid transparent;
+        border-right: calc(50vw - #{rem(1)} - #{rem(.5 * $home-width)}) solid transparent;
+    }
+}
+
+.skill {
+    &-container {
+        position: relative;
+        z-index: 10;
+        width: rem($home-width);
+        margin: auto;
+        padding: rem(16);
+        box-sizing: border-box;
+    }
+
+    &-heading {
+        @include font(Redressed);
+    }
+}

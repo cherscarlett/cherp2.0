@@ -5,7 +5,7 @@ $colors: (
     primary: (
         color: $color-white,
         background-color: $color-black,
-        background-transparency: transparentize($color-black, .87),
+        background-transparency: transparentize($color-black, .75),
         border-color: transparentize($color-white, .79)
     ),
     secondary: (

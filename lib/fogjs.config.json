@@ -1,7 +1,7 @@
 {
   "particles": {
     "number": {
-      "value": 63,
+      "value": 77,
       "density": {
         "enable": true,
         "value_area": 1843.9238699953512
@@ -11,7 +11,7 @@
       "value": "#ffcc66"
     },
     "shape": {
-      "type": "circle",
+      "type": ["image"],
       "stroke": {
         "width": 0,
         "color": "#000000"
@@ -20,9 +20,9 @@
         "nb_sides": 5
       },
       "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
+        "src": "https://bucketeer-942c06e0-8ba9-4560-a61b-a52ffc7c778f.s3.amazonaws.com/public/fog.png",
+        "width": 200,
+        "height": 200
       }
     },
     "opacity": {
@@ -36,7 +36,7 @@
       }
     },
     "size": {
-      "value": 1,
+      "value": 172.3667965430437,
       "random": false,
       "anim": {
         "enable": false
@@ -47,14 +47,14 @@
     },
     "move": {
       "enable": true,
-      "speed": 1,
+      "speed": 7,
       "direction": "none",
       "random": true,
       "straight": false,
       "out_mode": "out",
       "bounce": false,
       "attract": {
-        "enable": false,
+        "enable": true,
         "rotateX": 600,
         "rotateY": 600
       }

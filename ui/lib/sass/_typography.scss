@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500');
+@import url('https://fonts.googleapis.com/css?family=Redressed');
+
+$text-size-root: 16;
+$browser-text-size-root: 16;
+
+$fonts: (
+    Fira-Sans: unquote("sans serif"),
+    Fira-Mono: monospace,
+    Redressed: cursive
+);
+
+@function getFontType($font) {
+    @return map-get($fonts, str-replace($font, ' ', '-'));
+}
+
+@mixin font($font) {
+    $font: quote($font);
+    font-family: $font, getFontType($font);
+}

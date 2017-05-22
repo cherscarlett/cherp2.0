@@ -1,9 +1,13 @@
 // Header component
 
-header.header
-    hgroup.header-headings
-        h1.header-title
-            -- ${data.app.title.firstName} ${data.app.title.lastName}
-        h2.header-subtitle
-            -- ${data.app.title.jobTitle}
+header.header data-page=data.selected data-theme=data.theme
+    hgroup.header-headings data-page=data.selected
+        h1.header-title data-page=data.selected
+            if(data.app.abbreviateLogo)
+                -- ${data.app.title.firstName.charAt(0)} ${data.app.title.lastName.charAt(0)}
+            else
+                -- ${data.app.title.firstName} ${data.app.title.lastName}
+        h2.header-subtitle data-page=data.selected
+            if(!data.app.abbreviateLogo)
+                -- ${data.app.title.jobTitle}
     app-navigation navigation=data.app.navigation selected=data.selected if(data.app.navigation && data.app.navigation.length)

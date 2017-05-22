@@ -11,7 +11,11 @@ html lang="en"
         meta name="keywords" content="Cher Stewart, Software Engineer, Front-End Developer, UX Developer, UI Developer, Back-End Engineer, Back-End Developer, Full-Stack Engineer"
         link rel="shortcut icon" href="${data.cdn}icon.png" sizes="64x64" type="image/png"
         link rel="stylesheet" href="${data.cdn}main.css"
-    body class="${data.selected}" id="body"
-        app-header app=data.app selected=data.selected
-        script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
+    body#body class=data.selected data-theme=data.theme
+        app-header app=data.app selected=data.selected theme=data.theme
+        if(data.selected !== "home")
+            section data-page=data.selected
+                include(input.content)
+        script src="/socket.io/socket.io.js"
+        script src="${data.cdn}particlesJS.min.js"
         script src="${data.cdn}client.js"
