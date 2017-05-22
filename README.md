@@ -1,7 +1,7 @@
 cherp2.0
 =======
 
-## New personal site-
+New personal site: cherp.io
 
 Goals: 
 ------
@@ -11,6 +11,7 @@ Goals:
 * Try HTTP/2
 * Move from gulp to webpack
 * Use service workers
+* Add skills entries to database, and some kind of blogging and document service at visible @ /pub
 
 Tech:
 ------
