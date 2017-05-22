@@ -1,26 +1,31 @@
-# cherp2.0
+cherp2.0
+=======
 
-New personal site-
+New personal site: cherp.io
 
 Goals: 
+------
 
--- Move from Heroku to AWS
--- Learn to setup a multi-container docker application
--- Try HTTP/2
--- Move from gulp to webpack
--- Use service workers
+* Move from Heroku to AWS
+* Learn to setup a multi-container docker application
+* Try HTTP/2
+* Move from gulp to webpack
+* Use service workers
+* Add skills entries to database, and some kind of blogging and document service at visible @ /pub
 
 Tech:
+------
 
-HTTP/2
-Docker
-Dynamodb
-Python Flask API
-Nodejs 
-Connect
-Marko
-Socket.io
-Zeromq
-Babel
-SASS
-Webpack
+* HTTP/2
+* Docker
+* Dynamodb
+* Python Flask API
+* Nodejs 
+* Connect
+* Marko.js
+* Structured Page Fragments
+* Socket.io
+* Zeromq
+* Babel
+* SASS
+* Webpack
