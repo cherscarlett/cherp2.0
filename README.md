@@ -3,7 +3,7 @@ cherp2.0
 
 New personal site: [cherp.io](http://cherp.io/)
 
-Goals: 
+Goals:
 ------
 
 * Move from Heroku to AWS
@@ -13,6 +13,8 @@ Goals:
 * Use service workers
 * Add skills entries to database, and some kind of blogging and document service at visible @ /pub
 
+~~Complete~~
+
 Tech:
 ------
 
@@ -20,9 +22,10 @@ Tech:
 * Docker
 * Dynamodb
 * Python Flask API
-* ✔️ Nodejs 
+* ✔️ Nodejs
 * ✔️ Connect
 * ✔️ Marko.js
+* Redux
 * Structured Page Fragments
 * Socket.io
 * Zeromq
@@ -30,4 +33,4 @@ Tech:
 * ✔️ SASS
 * ✔️ Webpack
 
-✔️ = implemented 
+✔️ = implemented
