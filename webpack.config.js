@@ -57,10 +57,6 @@ module.exports = {
                     // use style-loader in development
                     fallback: "style-loader"
                 })
-            },
-            {
-                test: /\.marko$/,
-                loader: 'marko-loader'
             }
         ]
     },
