@@ -67,16 +67,18 @@ $height: 50;
     }
     @include logo(&, $home-width);
     &-headings {
-        width: 100%;
+        width: rem($home-width);
         height: calc(100% - 16vh);
         position: relative;
         z-index: 2;
         transition: $animation;
+        margin: auto;
         margin-top: rem(-9);
         &:not([data-page="home"]) {
-            transform: translateX(-9%);
+            transform: translateX(-37%);
+            height: auto;
             align-self: center;
-            margin-top: rem(-8);
+            margin-top: rem(-5);
         }
     }
     &-title {
@@ -84,15 +86,16 @@ $height: 50;
             font-size: rem(28);
             width: rem(20);
             line-height: rem(26);
-
-            &:before{
-                transform: rotate(-45deg) scale(.2);
-                margin-top: rem(-83);
+            &:before, &:after {
+                height: rem(50);
             }
-
+            &:before{
+                transform: rotate(-45deg);
+                margin-top: rem(5);
+            }
             &:after{
-                transform: rotate(45deg) scale(.2);
-                margin-top: rem(-83);
+                transform: rotate(45deg);
+                margin-top: rem(5);
             }
         }
     }

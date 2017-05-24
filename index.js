@@ -45,7 +45,11 @@ var io = new _socket2.default(server);
 _nodeRequire2.default.install();
 
 app.use((0, _compression2.default)()).use('/', function (request, response) {
-    return _router2.default.page(request, response, io);
+    return _router2.default.page(request, response);
+});
+
+io.on('connection', function (socket) {
+    console.log('connected to socket');
 });
 
 server.listen(port, function (err) {

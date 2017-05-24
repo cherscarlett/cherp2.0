@@ -20,7 +20,12 @@ marko.install()
 
 app
     .use(compression())
-    .use('/', (request, response) => router.page(request, response, io))
+    .use('/', (request, response) => router.page(request, response))
+
+
+io.on('connection', (socket) => {
+    console.log('connected to socket')
+})
 
 server.listen(port, (err) => {
     if (err) {

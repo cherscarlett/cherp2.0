@@ -1,8 +1,6 @@
-module.exports = {
-    onInput: (input, out) => {
+module.exports = class {
+    onInput (input, out) {
         this.input = null
-    },
-    updateTheme: (theme) => {
-        console.log(theme)
+        console.log(this)
     }
 }

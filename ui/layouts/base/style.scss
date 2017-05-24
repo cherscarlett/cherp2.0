@@ -27,10 +27,8 @@ body {
     &:after {
         border-top: 1px solid getColor(primary, border-color);
         margin-bottom: $home-gutter;
-        box-shadow: inset 0 0 rem(10) transparentize(getColor(primary, background-color), .6);
-    }
-    &.home:after {
         bottom: 0;
+        box-shadow: inset 0 0 rem(10) transparentize(getColor(primary, background-color), .6);
     }
 }
 
@@ -66,7 +64,8 @@ a:hover, a:active, a:focus {
 }
 
 section {
-    position: fixed;
+    overflow: hidden;
+    padding-top: calc(16vh + #{rem(2)});
     &:before, &:after {
         content: '';
         position: fixed;
@@ -74,7 +73,6 @@ section {
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: -2;
     }
     &:before {
         background-clip:padding-box;
@@ -82,9 +80,11 @@ section {
         filter: blur(rem(6));
         @include background(primary);
         opacity: .95;
+        z-index: -2;
     }
     &:after {
         background-color: getColor(secondary, background-transparency);
         @include border(getColor(secondary, border-color), solid, 1px, left, right);
+        z-index: -1;
     }
 }
