@@ -50,6 +50,10 @@ app.use((0, _compression2.default)()).use('/', function (request, response) {
 
 io.on('connection', function (socket) {
     console.log('connected to socket');
+    socket.on('pageLoaded', function () {
+        console.log(Date.now() + ': page loaded.');
+        _router2.default.resolveData(socket);
+    });
 });
 
 server.listen(port, function (err) {

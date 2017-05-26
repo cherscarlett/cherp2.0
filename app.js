@@ -22,10 +22,14 @@ app
     .use(compression())
     .use('/', (request, response) => router.page(request, response))
 
-
 io.on('connection', (socket) => {
     console.log('connected to socket')
+    socket.on('pageLoaded', () => {
+        console.log(`${Date.now()}: page loaded.`)
+        router.resolveData(socket)
+    })
 })
+
 
 server.listen(port, (err) => {
     if (err) {
