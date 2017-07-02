@@ -53,9 +53,7 @@ module.exports = {
                 use: extractSass.extract({
                     use: [
                         "css-loader", "svg-fill-loader/encodeSharp","sass-loader"
-                    ],
-                    // use style-loader in development
-                    fallback: "style-loader"
+                    ]
                 })
             },
             {
@@ -77,6 +75,6 @@ module.exports = {
             }
         }),
         extractSass,
-        new SpriteLoader()
+        new SpriteLoader(),
     ]
 }
