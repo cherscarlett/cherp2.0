@@ -4,9 +4,11 @@
   "description": "Personal Website for Cher Stewart",
   "main": "index.js",
   "scripts": {
-    "build": "babel app.js --watch --out-file index.js",
-    "start": "node index.js",
+    "start": "node app.js",
     "develop": "npm run build"
+  },
+  "engines": {
+    "node": ">=8.2.1"
   },
   "repository": {
     "type": "git",

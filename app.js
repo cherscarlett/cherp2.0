@@ -1,14 +1,13 @@
 'use strict'
 
-import 'babel-polyfill'
-import http from 'http'
-import path from 'path'
-import connect from 'connect'
-import compression from 'compression'
-import marko from 'marko/node-require'
-import markoComponents from 'marko/components'
-import router from './lib/router'
-import IO from 'socket.io'
+const http = require('http')
+const path = require('path')
+const connect = require('connect')
+const compression = require('compression')
+const marko = require('marko/node-require')
+const markoComponents = require('marko/components')
+const router = require('./lib/router')
+const IO = require('socket.io')
 
 const port = process.env.PORT || '9001' // It's over 9000
 
