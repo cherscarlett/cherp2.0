@@ -12,6 +12,7 @@ Goals:
 * ~~Move from gulp to webpack~~
 * Use service workers
 * Add skills entries to database, and some kind of blogging and document service at visible @ /pub
+* Learn Jest
 
 ~~Complete~~
 
@@ -32,5 +33,6 @@ Tech:
 * ✔️ Babel
 * ✔️ SASS
 * ✔️ Webpack
+* Jest
 
 ✔️ = implemented
