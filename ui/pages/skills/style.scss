@@ -26,6 +26,10 @@ section[data-page="skills"] {
         height: 100vh - $home-gutter;
     }
 
+    &-chart rect {
+        fill: white;
+    }
+
     &-heading {
         @include font(Redressed);
     }

@@ -2,9 +2,5 @@ include('../../layouts/base') app=data.app cdn=data.cdn selected=data.selected t
     @content
         .skill-container
             h2 aria-hidden="true" -- Skills
-            div.skill for(skill in data.skills)
-                h3.skill-heading
-                    -- ${skill.category}
-                ul
-                    li for(item in skill.list)
-                        -- ${item.text}
+            h3 -- To limit languages is to limit your world.
+            <!-- .skill for(skill in data.skills) -->

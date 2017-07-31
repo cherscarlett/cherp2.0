@@ -1,13 +1,16 @@
 'use strict'
 
+// can I haz import soon?
 const http = require('http')
 const path = require('path')
 const connect = require('connect')
 const compression = require('compression')
 const marko = require('marko/node-require')
-const markoComponents = require('marko/components')
 const router = require('./lib/router')
 const IO = require('socket.io')
+const dotenv = require('dotenv')
+
+dotenv.load()
 
 const port = process.env.PORT || '9001' // It's over 9000
 
@@ -28,7 +31,6 @@ io.on('connection', (socket) => {
         router.resolveData(socket)
     })
 })
-
 
 server.listen(port, (err) => {
     if (err) {
