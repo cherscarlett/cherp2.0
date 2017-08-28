@@ -1,6 +1,7 @@
 'use strict'
 
 const git = require('../../lib/github')
+const config = require('../../lib/config')
 
 const flatten = (array = []) => {
     return array.reduce((x, y) => {
@@ -8,64 +9,79 @@ const flatten = (array = []) => {
     }, [])
 }
 
-const getValueSum = ((array = []) => {
-    const values = array.map((x) => {
-        return Object.values(x)[0]
-    }, [])
+const getValueSum = ((values = []) => {
     return values.reduce((x,y) => {
         return x + y
     }, 0)
 })
 
 const getSkills = (percentages = []) => {
-    const allSkills = flatten(percentages)
-    const skills = allSkills.map((skill) => {
-        return Object.keys(skill)
-    })
-    const skillsFlat = flatten(skills)
-    return (Array.from(new Set(skillsFlat))).slice().sort()
+    const skills = flatten(flatten(percentages).map((skill) => {
+        return skill.name
+    }))
+    return (Array.from(new Set(skills))).slice().sort()
 }
-const getSkillRatios = (ratios = [], skills = []) => {
-    const allRatios = flatten(ratios)
-    const skillsSorted = skills.map((skill) => {
-        return allRatios.filter((ratio) => Object.keys(ratio)[0] === skill)
-    }, [])
-    const totalRatios = skillsSorted.map((skill) => {
-        const value = getValueSum(skill)
-        const skillKey = skill.map((lang) => {
-            return Object.keys(lang)[0]
+
+const getLines = (size = 0) => {
+    return size/config.bytesPerLine
+}
+
+const getMaxValue = (repositories = []) => {
+    return Math.max(...repositories.map((repository) => {
+        return getValueSum(repository.map((entry) => {
+            return entry.value
+        }, []))
+    }, []))
+}
+
+const getAdjustedValues = (repositories = []) => {
+    const maxValue = getMaxValue(repositories)
+    return repositories.map((repository) => {
+        const value = getValueSum(repository.map((entry) => {
+            return entry.value
+        }, []))
+        const size = getValueSum(repository.map((entry) => {
+            return entry.size
+        }, []))
+        const skillKey = repository.map((entry) => {
+            return entry.name
         }, [])[0]
         return {
             name: skillKey,
-            value: value
+            value: value/maxValue * 100,
+            lines: getLines(size),
+            count: repository.length
         }
-    })
-    const filteredSkills = totalRatios.filter((skill) => skill.value >= 10)
-    const values = filteredSkills.map((skill) => {
-        return skill.value
     }, [])
-    const maxValue = Math.max(...values)
-    const skillPercentages = filteredSkills.map((skill) => {
-        return {
-            name: skill.name,
-            value: skill.value/maxValue * 100
-        }
+}
+
+const getPercentages = (repositories = []) => {
+    return repositories.map((repository) => {
+        const total = Object.values(repository).reduce((sum, size) => sum + size, 0)
+        return Object.entries(repository).map(([language, size]) => ({
+            name: language,
+            value: size/total * 100,
+            size: size
+        }), []).filter(({value}) => value >= 10)
     })
-    return skillPercentages
+}
+
+const getSortedValues = (repositories = [], skills = []) => {
+    return skills.map((skill) => {
+        return flatten(repositories).filter((repository) => repository.name === skill)
+    }, [])
 }
 
 module.exports = {
     init: async () => {
         try {
-            const repositories = await git.getRepositories()
-            const projects = repositories.map((repository) => repository.name)
-            const languages = await Promise.all(projects.map( async (project) => {
-                return await git.getLanguages(project)
+            const repositories = (await git.getRepositories()).map((repository) => repository.name)
+            const languages = await Promise.all(repositories.map( async (repository) => {
+                return await git.getLanguages(repository)
             }))
-            const percentages = git.getPercentages(languages)
+            const percentages = getPercentages(languages.filter((repository) => Object.keys(repository).length))
             const skills =  getSkills(percentages)
-            const skillRatios = getSkillRatios(percentages, skills)
-            return skillRatios
+            return getAdjustedValues(getSortedValues(percentages, skills))
         } catch (error) {
             console.log(error)
             return error

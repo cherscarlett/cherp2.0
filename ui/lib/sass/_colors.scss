@@ -11,5 +11,9 @@ $colors: (
     secondary: (
         background-transparency: transparentize($color-black, .55),
         border-color: transparentize($color-black, .79)
+    ),
+    tertiary: (
+        background-color: transparentize($color-white, .85),
+        background-transparency: transparentize($color-white, .55)
     )
-)
+);
