@@ -16,7 +16,6 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      transition: $animation;
   }
   #{$root}-title {
       text-transform: lowercase;
@@ -28,7 +27,6 @@
       line-height: rem(.46875 * $width);
       font-size: rem(.125 * $width);
       opacity: .85;
-      transition: $animation;
       &:before, &:after {
           content: '';
           display: block;
@@ -42,7 +40,6 @@
           top: 0;
           bottom: 0;
           margin: auto;
-          transition: $animation;
       }
       &:before {
         transform: rotate(-45deg);
@@ -59,7 +56,6 @@
       font-size: rem(.04375 * $width);
       font-weight: 200;
       opacity: .85;
-      transition: $animation;
       &:before, &:after {
           content: '';
           display: block;
@@ -74,7 +70,6 @@
           top: 0;
           bottom: 0;
           margin: auto;
-          transition: $animation;
       }
       &:before {
           transform: translateY(rem(-.25 * (.40625 * $width)));

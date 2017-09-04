@@ -12,7 +12,7 @@ const dotenv = require('dotenv')
 
 dotenv.load()
 
-const port = process.env.PORT || '9001' // It's over 9000
+const port = process.env.PORT || '9002' // It's over 9000
 
 const app = connect()
 const server = http.createServer(app)
