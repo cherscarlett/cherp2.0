@@ -4,8 +4,8 @@
   "description": "Personal Website for Cher Stewart",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "develop": "npm run build",
+    "start": "node app.js",
+    "develop": "nodemon app.js",
     "build": "webpack ./client.js --watch",
     "test": "jest"
   },
