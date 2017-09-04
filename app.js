@@ -2,7 +2,6 @@
 
 // can I haz import soon?
 const http = require('http')
-const path = require('path')
 const connect = require('connect')
 const compression = require('compression')
 const marko = require('marko/node-require')
@@ -10,7 +9,9 @@ const router = require('./lib/router')
 const IO = require('socket.io')
 const dotenv = require('dotenv')
 
-dotenv.load()
+if (dotenv) {
+    dotenv.load()
+}
 
 const port = process.env.PORT || '9002' // It's over 9000
 

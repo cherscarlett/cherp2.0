@@ -25,6 +25,7 @@
   "devDependencies": {
     "css-loader": "^0.28.1",
     "d3": "^4.10.0",
+    "dotenv": "^4.0.0",
     "eslint": "^4.3.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
@@ -45,7 +46,6 @@
     "axios": "^0.16.2",
     "compression": "^1.6.2",
     "connect": "^3.6.1",
-    "dotenv": "^4.0.0",
     "install": "^0.10.1",
     "maquette": "^2.5.2",
     "marko": "^4.2.8",
